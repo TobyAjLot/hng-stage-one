@@ -23,8 +23,9 @@ app.get("/api", (req, res) => {
     current_day: weekday[date.getDay()],
     utc_time: utc_time,
     track: req.query.track,
-    github_file_url: "https://github.com/username/repo/blob/main/file_name.ext",
-    github_repo_url: "https://github.com/username/repo",
+    github_file_url:
+      "https://github.com/TobyAjLot/hng-stage-one/blob/master/index.js",
+    github_repo_url: "https://github.com/TobyAjLot/hng-stage-one",
     status_code: 200,
   });
 });
