@@ -14,14 +14,13 @@ const weekday = [
   "Friday",
   "Saturday",
 ];
-const date = new Date();
-const utc_time = date.toISOString().split(".")[0] + "Z";
+var day = new Date().getDay();
 
 app.get("/api", (req, res) => {
   res.json({
     slack_name: req.query.slack_name,
-    current_day: weekday[date.getDay()],
-    utc_time: utc_time,
+    current_day: weekday[day],
+    utc_time: new Date().toISOString().split(".")[0] + "Z",
     track: req.query.track,
     github_file_url:
       "https://github.com/TobyAjLot/hng-stage-one/blob/master/index.js",
